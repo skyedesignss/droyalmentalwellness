@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Videos & Community | Droyal Mental Wellness</title>
+  <meta name="description" content="Watch community and activity videos from Droyal Mental Wellness. See moments of support, connection, and everyday progress in Reisterstown, Maryland.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://droyalmentalwellness.org/videos.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://droyalmentalwellness.org/videos.html">
+  <meta property="og:title" content="Videos & Community | Droyal Mental Wellness">
+  <meta property="og:description" content="Community and activity videos from Droyal Mental Wellness.">
+  <meta property="og:image" content="https://droyalmentalwellness.org/assets/images/og-default.jpg">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Droyal Mental Wellness">
+
+  <link rel="icon" href="favicon/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/videos.css">
+</head>
+
+<body>
+  <div id="header-placeholder"></div>
+
+  <main id="main-content">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-labelledby="videos-hero-heading">
+      <div class="page-hero-bg" aria-hidden="true">
+        <img 
+          src="assets/images/videos-hero.webp" 
+          alt=""
+          width="1920"
+          height="900"
+          decoding="async"
+        >
+        <div class="page-hero-overlay"></div>
+      </div>
+
+      <div class="container">
+        <div class="page-hero-content" data-aos="fade-up" data-aos-duration="900">
+          <p class="page-hero-eyebrow">Videos & Community</p>
+          <h1 id="videos-hero-heading" class="page-hero-title">
+            Moments of connection and progress
+          </h1>
+          <p class="page-hero-lead">
+            Explore videos that reflect the everyday work of support, community, and growth at Droyal Mental Wellness.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- INTRO -->
+    <section class="section videos-intro" aria-labelledby="videos-intro-heading">
+      <div class="container">
+        <div class="videos-intro-inner" data-aos="fade-up" data-aos-duration="850">
+          <p class="section-eyebrow">Our Community in Motion</p>
+          <h2 id="videos-intro-heading" class="section-title">
+            Real moments, shared with care
+          </h2>
+          <div class="videos-intro-text">
+            <p>
+              These videos highlight activities, gatherings, and everyday moments from our community. They are meant to give you a sense of the supportive environment we work to create.
+            </p>
+            <p>
+              All videos are hosted on YouTube and are shared here for easy viewing. They are not clinical content or substitutes for professional care.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED VIDEO -->
+    <section class="section videos-featured" aria-labelledby="featured-video-heading">
+        <div class="container">
+
+            <div class="section-header text-center" data-aos="fade-up" data-aos-duration="800">
+            <p class="section-eyebrow">Featured</p>
+            <h2 id="featured-video-heading" class="section-title">
+                Watch this first
+            </h2>
+            </div>
+
+            <div class="featured-video-wrap" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100">
+            <div class="featured-video-player">
+                <div class="video-embed" id="featured-embed">
+                <!-- JS injects the iframe -->
+                </div>
+            </div>
+
+            <div class="video-feature-info">
+                <h3 class="video-feature-heading" id="featured-title">Loading video…</h3>
+                <p class="video-feature-description" id="featured-desc"></p>
+                <p class="video-feature-date" id="featured-date"></p>
+            </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- VIDEO CATEGORIES + GRID -->
+    <section class="section videos-grid-section section--alt" aria-labelledby="videos-grid-heading">
+        <div class="container">
+
+            <div class="section-header text-center" data-aos="fade-up" data-aos-duration="800">
+            <p class="section-eyebrow">All Videos</p>
+            <h2 id="videos-grid-heading" class="section-title">
+                Explore more moments
+            </h2>
+            <p class="section-lead">
+                Browse by category or scroll through the collection.
+            </p>
+            </div>
+
+            <div class="video-categories" role="tablist" aria-label="Video categories" data-aos="fade-up" data-aos-duration="800" data-aos-delay="80">
+
+            </div>
+
+            <div class="videos-grid" id="videos-grid" data-aos="fade-up" data-aos-duration="850" data-aos-delay="120">
+
+            </div>
+
+            <div class="videos-empty" id="videos-empty" hidden>
+            <p>No videos in this category right now.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- WATCH MORE -->
+    <section class="section videos-still-questions" aria-labelledby="videos-still-heading">
+    <div class="container">
+        <div class="videos-still-inner" data-aos="fade-up" data-aos-duration="850">
+
+        <div class="videos-still-content">
+            <p class="section-eyebrow">Want to See More?</p>
+            <h2 id="videos-still-heading" class="section-title">
+            Visit our YouTube channel for more videos
+            </h2>
+            <p class="videos-still-lead">
+            Explore additional community and activity videos on our YouTube channel. If you have questions about our services, we are here to help.
+            </p>
+        </div>
+
+        <div class="videos-still-actions">
+            <a href="[YOUTUBE_CHANNEL_URL]" class="btn btn--primary" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+            Visit YouTube Channel
+            </a>
+            <a href="appointment.html" class="btn btn--outline">
+            Book an Appointment
+            </a>
+        </div>
+
+        </div>
+    </div>
+    </section>
+
+
+    <!-- FINAL CTA BAND -->
+    <section class="videos-cta-band" aria-labelledby="videos-cta-heading">
+        <div class="container">
+            <div class="videos-cta-inner" data-aos="zoom-in" data-aos-duration="800">
+
+            <div class="videos-cta-content">
+                <h2 id="videos-cta-heading" class="videos-cta-title">
+                Ready to take the next step?
+                </h2>
+                <p class="videos-cta-text">
+                Whether you have more questions or are ready to begin, we are here to support you with clarity and care.
+                </p>
+            </div>
+
+            <div class="videos-cta-actions">
+                <a href="appointment.html" class="btn btn--primary btn--lg">
+                Book an Appointment
+                </a>
+                <a href="contact.html" class="btn btn--outline btn--lg videos-cta-secondary">
+                Contact Us
+                </a>
+            </div>
+
+            </div>
+        </div>
+    </section>
+
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

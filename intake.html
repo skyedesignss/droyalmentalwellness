@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Intake Form | Droyal Mental Wellness</title>
+  <meta name="description" content="Begin your care journey with Droyal Mental Wellness. Complete our secure, confidential intake form in a few simple steps.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://droyalmentalwellness.org/intake.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://droyalmentalwellness.org/intake.html">
+  <meta property="og:title" content="Intake Form | Droyal Mental Wellness">
+  <meta property="og:description" content="Begin your care journey with Droyal Mental Wellness. Complete our secure intake form.">
+  <meta property="og:image" content="https://droyalmentalwellness.org/assets/images/og-default.jpg">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Droyal Mental Wellness">
+
+  <link rel="icon" href="favicon/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/intake.css">
+</head>
+<body>
+
+
+    <!-- ========== WELCOME SCREEN ========== -->
+    <section class="welcome-screen" id="welcome-screen">
+      <div class="welcome-media">
+        <img 
+          src="assets/images/intake-hero.webp" 
+          alt=""
+          width="960"
+          height="1200"
+          loading="eager"
+          decoding="async"
+        >
+        <div class="welcome-media-overlay"></div>
+      </div>
+
+      <div class="welcome-content">
+        <div class="welcome-inner">
+          <p class="welcome-eyebrow">Droyal Mental Wellness</p>
+          <h1 class="welcome-title">Welcome. We’re glad you’re here.</h1>
+          <p class="welcome-lead">
+            This short intake helps us understand your needs so we can offer the most supportive next step. 
+            It takes about 5–8 minutes. You can move forward and back at any time.
+          </p>
+          <ul class="welcome-points">
+            <li>Secure & confidential</li>
+            <li>No appointment is confirmed until we speak with you</li>
+            <li>You can save progress by completing it in one sitting</li>
+          </ul>
+          <button type="button" id="start-btn" class="btn btn--primary btn--lg">
+            Begin Intake
+          </button>
+        </div>
+      </div>
+    </section>
+
+  <!-- ========== FORM SCREEN ========== -->
+  <section class="form-screen" id="form-screen" hidden>
+      <header class="form-header">
+        <div class="form-header-inner">
+
+          <a href="index.html" class="form-logo" aria-label="Droyal Mental Wellness">
+            <img
+              src="assets/logo/droyal-logo.webp"
+              alt="Droyal Mental Wellness"
+              width="140"
+              height="36"
+            >
+          </a>
+
+          <div class="form-header-actions">
+            <a href="index.html" class="form-back-link">
+              <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+              <span>Back to Website</span>
+            </a>
+
+            <a href="appointment.html" class="btn btn--header-outline">
+              <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+              <span>Book Appointment</span>
+            </a>
+          </div>
+
+        </div>
+      </header>
+
+      <!-- Progress -->
+      <div class="progress-wrap">
+        <div class="progress-track" id="progress-track">
+          <div class="progress-step is-active" data-step="1">
+            <span class="progress-circle">1</span>
+            <span class="progress-label">About You</span>
+          </div>
+          <div class="progress-step" data-step="2">
+            <span class="progress-circle">2</span>
+            <span class="progress-label">Services</span>
+          </div>
+          <div class="progress-step" data-step="3">
+            <span class="progress-circle">3</span>
+            <span class="progress-label">Concerns</span>
+          </div>
+          <div class="progress-step" data-step="4">
+            <span class="progress-circle">4</span>
+            <span class="progress-label">History</span>
+          </div>
+          <div class="progress-step" data-step="5">
+            <span class="progress-circle">5</span>
+            <span class="progress-label">Health</span>
+          </div>
+          <div class="progress-step" data-step="6">
+            <span class="progress-circle">6</span>
+            <span class="progress-label">Preferences</span>
+          </div>
+          <div class="progress-step" data-step="7">
+            <span class="progress-circle">7</span>
+            <span class="progress-label">Confirm</span>
+          </div>
+        </div>
+      </div>
+
+      <main class="form-main">
+        <form id="intake-form" action="api/intake.php" method="POST" novalidate>
+
+          <!-- STEP 1: Who + Personal Info -->
+          <div class="form-step is-active" data-step="1">
+            <h2 class="step-title">Who is this for?</h2>
+            <p class="step-desc">Tell us a little about the person seeking support.</p>
+
+            <div class="field-group">
+              <label class="field-label">I am seeking services for <span class="req">*</span></label>
+              <div class="radio-cards" id="seeking-services-for">
+                <label class="radio-card">
+                  <input type="radio" name="seeking_services_for" value="myself" required>
+                  <span>Myself</span>
+                </label>
+                <label class="radio-card">
+                  <input type="radio" name="seeking_services_for" value="my_child">
+                  <span>My child</span>
+                </label>
+                <label class="radio-card">
+                  <input type="radio" name="seeking_services_for" value="another_person">
+                  <span>Another person</span>
+                </label>
+              </div>
+              <p class="field-error" data-error-for="seeking_services_for"></p>
+            </div>
+
+            <div class="field-group" id="relationship-group" hidden>
+              <label class="field-label" for="relationship_to_client">Your relationship to the client <span class="req">*</span></label>
+              <select name="relationship_to_client" id="relationship_to_client" class="field-input">
+                <option value="">Select relationship</option>
+                <option value="parent">Parent</option>
+                <option value="legal_guardian">Legal guardian</option>
+                <option value="other">Other</option>
+              </select>
+              <p class="field-error" data-error-for="relationship_to_client"></p>
+            </div>
+
+            <div class="field-row">
+              <div class="field-group">
+                <label class="field-label" for="first_name">First name <span class="req">*</span></label>
+                <input type="text" id="first_name" name="first_name" class="field-input" maxlength="100" autocomplete="given-name" required>
+                <p class="field-error" data-error-for="first_name"></p>
+              </div>
+              <div class="field-group">
+                <label class="field-label" for="last_name">Last name <span class="req">*</span></label>
+                <input type="text" id="last_name" name="last_name" class="field-input" maxlength="100" autocomplete="family-name" required>
+                <p class="field-error" data-error-for="last_name"></p>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="preferred_name">Preferred name <span class="optional">(optional)</span></label>
+              <input type="text" id="preferred_name" name="preferred_name" class="field-input" maxlength="100">
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="date_of_birth">Date of birth</label>
+              <input type="date" id="date_of_birth" name="date_of_birth" class="field-input">
+              <p class="field-error" data-error-for="date_of_birth"></p>
+            </div>
+
+            <div class="field-row">
+              <div class="field-group">
+                <label class="field-label" for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" class="field-input" maxlength="30" autocomplete="tel">
+              </div>
+              <div class="field-group">
+                <label class="field-label" for="email">Email</label>
+                <input type="email" id="email" name="email" class="field-input" maxlength="180" autocomplete="email">
+                <p class="field-error" data-error-for="email"></p>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="preferred_contact_method">Preferred contact method</label>
+              <select id="preferred_contact_method" name="preferred_contact_method" class="field-input">
+                <option value="">Select</option>
+                <option value="phone">Phone</option>
+                <option value="email">Email</option>
+                <option value="either">Either is fine</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- STEP 2: Services -->
+          <div class="form-step" data-step="2" hidden>
+            <h2 class="step-title">Services of interest</h2>
+            <p class="step-desc">Select all that apply.</p>
+
+            <div class="field-group">
+              <label class="field-label">Services requested <span class="req">*</span></label>
+              <div class="checkbox-list">
+                <label class="check-item">
+                  <input type="checkbox" name="services_requested[]" value="OMHC">
+                  <span>Outpatient Mental Health Clinic (OMHC)</span>
+                </label>
+                <label class="check-item">
+                  <input type="checkbox" name="services_requested[]" value="PRP">
+                  <span>Psychiatric Rehabilitation Program (PRP)</span>
+                </label>
+                <label class="check-item">
+                  <input type="checkbox" name="services_requested[]" value="Unsure">
+                  <span>Not sure yet</span>
+                </label>
+              </div>
+              <p class="field-error" data-error-for="services_requested"></p>
+            </div>
+
+            <div class="field-group" id="prp-areas-group" hidden>
+              <label class="field-label">PRP support areas (if applicable)</label>
+              <div class="checkbox-list">
+                <label class="check-item"><input type="checkbox" name="prp_support_areas[]" value="Daily living skills"><span>Daily living skills</span></label>
+                <label class="check-item"><input type="checkbox" name="prp_support_areas[]" value="Employment / education"><span>Employment / education</span></label>
+                <label class="check-item"><input type="checkbox" name="prp_support_areas[]" value="Social skills"><span>Social skills</span></label>
+                <label class="check-item"><input type="checkbox" name="prp_support_areas[]" value="Community resources"><span>Community resources</span></label>
+                <label class="check-item"><input type="checkbox" name="prp_support_areas[]" value="Housing support"><span>Housing support</span></label>
+                <label class="check-item"><input type="checkbox" name="prp_support_areas[]" value="Money management"><span>Money management</span></label>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 3: Concerns -->
+          <div class="form-step" data-step="3" hidden>
+            <h2 class="step-title">Current concerns</h2>
+            <p class="step-desc">Help us understand what brought you here.</p>
+
+            <div class="field-group">
+              <label class="field-label" for="reason_for_seeking_services">Main reason for seeking services</label>
+              <textarea id="reason_for_seeking_services" name="reason_for_seeking_services" class="field-input" rows="4" maxlength="2000" placeholder="In your own words..."></textarea>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="concern_duration">How long have these concerns been present?</label>
+              <select id="concern_duration" name="concern_duration" class="field-input">
+                <option value="">Select</option>
+                <option value="less_than_1_month">Less than 1 month</option>
+                <option value="1_to_3_months">1–3 months</option>
+                <option value="3_to_6_months">3–6 months</option>
+                <option value="more_than_6_months">More than 6 months</option>
+                <option value="not_sure">Not sure</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label">Areas needing support</label>
+              <div class="checkbox-list">
+                <label class="check-item"><input type="checkbox" name="areas_needing_support[]" value="Mood / depression"><span>Mood / depression</span></label>
+                <label class="check-item"><input type="checkbox" name="areas_needing_support[]" value="Anxiety / stress"><span>Anxiety / stress</span></label>
+                <label class="check-item"><input type="checkbox" name="areas_needing_support[]" value="Relationships"><span>Relationships</span></label>
+                <label class="check-item"><input type="checkbox" name="areas_needing_support[]" value="Trauma"><span>Trauma</span></label>
+                <label class="check-item"><input type="checkbox" name="areas_needing_support[]" value="Behavioral concerns"><span>Behavioral concerns</span></label>
+                <label class="check-item"><input type="checkbox" name="areas_needing_support[]" value="Daily functioning"><span>Daily functioning</span></label>
+                <label class="check-item"><input type="checkbox" name="areas_needing_support[]" value="Other"><span>Other</span></label>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="hoped_outcomes">What are you hoping to gain from services?</label>
+              <textarea id="hoped_outcomes" name="hoped_outcomes" class="field-input" rows="3" maxlength="1500"></textarea>
+            </div>
+          </div>
+
+          <!-- STEP 4: History -->
+          <div class="form-step" data-step="4" hidden>
+            <h2 class="step-title">Service & medication history</h2>
+            <p class="step-desc">This helps us coordinate care safely.</p>
+
+            <div class="field-group">
+              <label class="field-label">Have you previously received mental health services?</label>
+              <div class="radio-row">
+                <label class="radio-pill"><input type="radio" name="previously_received_services" value="yes"><span>Yes</span></label>
+                <label class="radio-pill"><input type="radio" name="previously_received_services" value="no"><span>No</span></label>
+                <label class="radio-pill"><input type="radio" name="previously_received_services" value="not_sure"><span>Not sure</span></label>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label">Are you currently receiving services elsewhere?</label>
+              <div class="radio-row">
+                <label class="radio-pill"><input type="radio" name="currently_receiving_services" value="yes"><span>Yes</span></label>
+                <label class="radio-pill"><input type="radio" name="currently_receiving_services" value="no"><span>No</span></label>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label">Previously taken mental health medication?</label>
+              <div class="radio-row">
+                <label class="radio-pill"><input type="radio" name="previously_taken_mental_health_medication" value="yes"><span>Yes</span></label>
+                <label class="radio-pill"><input type="radio" name="previously_taken_mental_health_medication" value="no"><span>No</span></label>
+                <label class="radio-pill"><input type="radio" name="previously_taken_mental_health_medication" value="not_sure"><span>Not sure</span></label>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label">Currently taking mental health medication?</label>
+              <div class="radio-row">
+                <label class="radio-pill"><input type="radio" name="currently_taking_mental_health_medication" value="yes"><span>Yes</span></label>
+                <label class="radio-pill"><input type="radio" name="currently_taking_mental_health_medication" value="no"><span>No</span></label>
+                <label class="radio-pill"><input type="radio" name="currently_taking_mental_health_medication" value="not_sure"><span>Not sure</span></label>
+              </div>
+            </div>
+
+            <div class="field-group" id="medication-names-group" hidden>
+              <label class="field-label" for="medication_names">Medication names (if known)</label>
+              <textarea id="medication_names" name="medication_names" class="field-input" rows="2" placeholder="List any current or recent medications"></textarea>
+            </div>
+          </div>
+
+          <!-- STEP 5: Health & Insurance -->
+          <div class="form-step" data-step="5" hidden>
+            <h2 class="step-title">Health & insurance</h2>
+            <p class="step-desc">Optional but helpful for care coordination.</p>
+
+            <div class="field-group">
+              <label class="field-label">Do you have a primary care provider?</label>
+              <div class="radio-row">
+                <label class="radio-pill"><input type="radio" name="has_primary_care_provider" value="yes"><span>Yes</span></label>
+                <label class="radio-pill"><input type="radio" name="has_primary_care_provider" value="no"><span>No</span></label>
+                <label class="radio-pill"><input type="radio" name="has_primary_care_provider" value="prefer_not_to_say"><span>Prefer not to say</span></label>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="medical_conditions_or_health_concerns">Any medical conditions or health concerns we should know about?</label>
+              <textarea id="medical_conditions_or_health_concerns" name="medical_conditions_or_health_concerns" class="field-input" rows="3"></textarea>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label">Do you have health insurance?</label>
+              <div class="radio-row">
+                <label class="radio-pill"><input type="radio" name="has_health_insurance" value="yes"><span>Yes</span></label>
+                <label class="radio-pill"><input type="radio" name="has_health_insurance" value="no"><span>No</span></label>
+                <label class="radio-pill"><input type="radio" name="has_health_insurance" value="not_sure"><span>Not sure</span></label>
+              </div>
+            </div>
+
+            <div id="insurance-fields" hidden>
+              <div class="field-group">
+                <label class="field-label" for="insurance_provider">Insurance provider</label>
+                <input type="text" id="insurance_provider" name="insurance_provider" class="field-input" maxlength="180">
+              </div>
+              <div class="field-group">
+                <label class="field-label" for="insurance_member_policy_id">Member / Policy ID</label>
+                <input type="text" id="insurance_member_policy_id" name="insurance_member_policy_id" class="field-input" maxlength="180">
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 6: Support + Preferences -->
+          <div class="form-step" data-step="6" hidden>
+            <h2 class="step-title">Support person & scheduling</h2>
+            <p class="step-desc">Optional emergency contact and preferred times.</p>
+
+            <div class="field-group">
+              <label class="field-label" for="support_contact_name">Support contact name</label>
+              <input type="text" id="support_contact_name" name="support_contact_name" class="field-input" maxlength="150">
+            </div>
+            <div class="field-row">
+              <div class="field-group">
+                <label class="field-label" for="support_contact_relationship">Relationship</label>
+                <input type="text" id="support_contact_relationship" name="support_contact_relationship" class="field-input" maxlength="100">
+              </div>
+              <div class="field-group">
+                <label class="field-label" for="support_contact_phone">Phone</label>
+                <input type="tel" id="support_contact_phone" name="support_contact_phone" class="field-input" maxlength="30">
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="follow_up_contact_method">How should we follow up with you?</label>
+              <select id="follow_up_contact_method" name="follow_up_contact_method" class="field-input">
+                <option value="">Select</option>
+                <option value="phone">Phone</option>
+                <option value="email">Email</option>
+                <option value="either">Either is fine</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label">Convenient days</label>
+              <div class="checkbox-list checkbox-list--inline">
+                <label class="check-item"><input type="checkbox" name="convenient_days[]" value="Monday"><span>Mon</span></label>
+                <label class="check-item"><input type="checkbox" name="convenient_days[]" value="Tuesday"><span>Tue</span></label>
+                <label class="check-item"><input type="checkbox" name="convenient_days[]" value="Wednesday"><span>Wed</span></label>
+                <label class="check-item"><input type="checkbox" name="convenient_days[]" value="Thursday"><span>Thu</span></label>
+                <label class="check-item"><input type="checkbox" name="convenient_days[]" value="Friday"><span>Fri</span></label>
+                <label class="check-item"><input type="checkbox" name="convenient_days[]" value="Saturday"><span>Sat</span></label>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label">Convenient time of day</label>
+              <div class="checkbox-list checkbox-list--inline">
+                <label class="check-item"><input type="checkbox" name="convenient_time_of_day[]" value="Morning"><span>Morning</span></label>
+                <label class="check-item"><input type="checkbox" name="convenient_time_of_day[]" value="Afternoon"><span>Afternoon</span></label>
+                <label class="check-item"><input type="checkbox" name="convenient_time_of_day[]" value="Evening"><span>Evening</span></label>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 7: Confirm -->
+          <div class="form-step" data-step="7" hidden>
+            <h2 class="step-title">Almost done</h2>
+            <p class="step-desc">Please review and confirm the statements below.</p>
+
+            <div class="field-group">
+              <label class="check-item check-item--large">
+                <input type="checkbox" name="privacy_acknowledged" value="1" required>
+                <span>I understand that the information I provide will be kept confidential in accordance with applicable privacy laws and Droyal Mental Wellness policies. <span class="req">*</span></span>
+              </label>
+              <p class="field-error" data-error-for="privacy_acknowledged"></p>
+            </div>
+
+            <div class="field-group">
+              <label class="check-item check-item--large">
+                <input type="checkbox" name="information_accuracy_confirmed" value="1" required>
+                <span>I confirm that the information I have provided is accurate to the best of my knowledge. <span class="req">*</span></span>
+              </label>
+              <p class="field-error" data-error-for="information_accuracy_confirmed"></p>
+            </div>
+
+            <div class="confirm-note">
+              <p>After you submit, you will receive a confirmation with a reference number. Our team will contact you using the details you provided.</p>
+            </div>
+          </div>
+
+          <!-- Navigation -->
+          <div class="form-nav">
+            <button type="button" class="btn btn--ghost" id="back-btn" hidden>Back</button>
+            <div class="form-nav-right">
+              <button type="button" class="btn btn--header-outline" id="next-btn">Continue</button>
+              <button type="submit" class="btn btn--primary" id="submit-btn" hidden>Submit Intake</button>
+            </div>
+          </div>
+        </form>
+      </main>
+    </section>
+
+    <!-- SUCCESS SCREEN -->
+    <section class="success-screen" id="success-screen" hidden>
+      <div class="success-card">
+        <div class="success-icon" aria-hidden="true">
+          <svg class="success-checkmark" viewBox="0 0 52 52">
+            <circle class="success-checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+            <path class="success-checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+          </svg>
+        </div>
+        <h2 class="success-title">Thank you</h2>
+        <p class="success-message">Your intake has been received successfully.</p>
+        <p class="success-ref">Reference number: <strong id="ref-number"></strong></p>
+        <p class="success-note">Our team will review your information and contact you shortly. Please keep this reference number for your records.</p>
+        <a href="/" class="btn btn--primary">Return to Home</a>
+      </div>
+    </section>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/intake.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

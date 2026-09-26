@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Book an Appointment | Droyal Mental Wellness</title>
+  <meta name="description" content="Request an appointment for outpatient mental health services or psychiatric rehabilitation at Droyal Mental Wellness in Reisterstown, Maryland.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://droyalmentalwellness.org/appointment.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://droyalmentalwellness.org/appointment.html">
+  <meta property="og:title" content="Book an Appointment | Droyal Mental Wellness">
+  <meta property="og:description" content="Schedule outpatient mental health or psychiatric rehabilitation services in Reisterstown, Maryland.">
+  <meta property="og:image" content="https://droyalmentalwellness.org/assets/images/og-default.jpg">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Droyal Mental Wellness">
+
+  <link rel="icon" href="favicon/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/appointment.css">
+</head>
+
+<body>
+  <div id="header-placeholder"></div>
+
+  <main id="main-content">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-labelledby="appointment-hero-heading">
+      <div class="page-hero-bg" aria-hidden="true">
+        <img 
+          src="assets/images/appointment-hero.webp" 
+          alt=""
+          width="1920"
+          height="900"
+          decoding="async"
+        >
+        <div class="page-hero-overlay"></div>
+      </div>
+
+      <div class="container">
+        <div class="page-hero-content" data-aos="fade-up" data-aos-duration="900">
+          <p class="page-hero-eyebrow">Book an Appointment</p>
+          <h1 id="appointment-hero-heading" class="page-hero-title">
+            Take the next step with confidence
+          </h1>
+          <p class="page-hero-lead">
+            Request an appointment for outpatient mental health services or psychiatric rehabilitation. We will guide you through the process with clarity and care.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- HOW IT WORKS -->
+    <section class="section how-it-works" aria-labelledby="how-it-works-heading">
+      <div class="container">
+
+        <div class="section-header text-center" data-aos="fade-up" data-aos-duration="800">
+          <p class="section-eyebrow">How It Works</p>
+          <h2 id="how-it-works-heading" class="section-title">
+            A simple path to getting started
+          </h2>
+          <p class="section-lead">
+            We keep the process clear and manageable so you can focus on what matters most.
+          </p>
+        </div>
+
+        <div class="how-steps-grid">
+
+          <article class="how-step-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="80">
+            <div class="how-step-number">01</div>
+            <h3 class="how-step-title">Choose a time</h3>
+            <p class="how-step-text">
+              Use the calendar below to select a date and time that works for you. Available openings will be shown clearly.
+            </p>
+          </article>
+
+          <article class="how-step-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="160">
+            <div class="how-step-number">02</div>
+            <h3 class="how-step-title">Share a few details</h3>
+            <p class="how-step-text">
+              Provide your name, contact information, and the type of service you are interested in. This helps us prepare for your visit.
+            </p>
+          </article>
+
+          <article class="how-step-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="240">
+            <div class="how-step-number">03</div>
+            <h3 class="how-step-title">We confirm with you</h3>
+            <p class="how-step-text">
+              Our team will review your request and follow up to confirm the appointment and answer any questions you may have.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- APPOINTMENT REQUEST FORM -->
+    <section class="section booking-section section--alt" aria-labelledby="booking-heading">
+      <div class="container">
+
+        <div class="section-header text-center" data-aos="fade-up" data-aos-duration="800">
+          <p class="section-eyebrow">Schedule Your Visit</p>
+          <h2 id="booking-heading" class="section-title">
+            Request an appointment
+          </h2>
+          <p class="section-lead">
+            Share your details below and our team will confirm a time that works for you.
+          </p>
+        </div>
+
+        <div class="availability-banner" data-aos="fade-up" data-aos-duration="700">
+
+          <div class="availability-status" id="office-status">
+            <span class="status-dot" id="status-dot"></span>
+            <span id="status-text">Checking status…</span>
+          </div>
+
+          <div class="availability-hours">
+            <div class="hours-item">
+              <strong>Mon – Fri</strong>
+              <span>9:00 AM – 5:00 PM</span>
+            </div>
+            <div class="hours-item">
+              <strong>Saturday</strong>
+              <span>By appointment</span>
+            </div>
+            <div class="hours-item">
+              <strong>Sunday</strong>
+              <span>Closed</span>
+            </div>
+          </div>
+
+          <div class="availability-time">
+            <span class="time-label">Current date &amp; time</span>
+            <span class="time-value" id="current-time">—</span>
+          </div>
+
+        </div>
+
+        <!-- Form Card -->
+        <div class="form-wrap" data-aos="fade-up" data-aos-duration="850" data-aos-delay="80">
+
+          <form
+            class="appointment-form"
+            id="appointment-form"
+            action="api/appointment.php"
+            method="POST"
+            novalidate
+          >
+
+            <div class="form-group">
+              <label for="full-name" class="form-label">
+                Full Name <span class="required">*</span>
+              </label>
+              <input
+                type="text"
+                id="full-name"
+                name="full_name"
+                class="form-input"
+                required
+                maxlength="150"
+                autocomplete="name"
+                placeholder="Your full name"
+              >
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone" class="form-label">
+                  Phone <span class="required">*</span>
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="form-input"
+                  required
+                  maxlength="30"
+                  autocomplete="tel"
+                  placeholder="(xxx) xxx-xxxx"
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">
+                  Email <span class="required">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-input"
+                  required
+                  maxlength="180"
+                  autocomplete="email"
+                  placeholder="you@example.com"
+                >
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="service-type" class="form-label">
+                Service Interested In <span class="required">*</span>
+              </label>
+              <select id="service-type" name="service_type" class="form-select" required>
+                <option value="" disabled selected>Select a service</option>
+                <option value="OMHC">Outpatient Mental Health (OMHC)</option>
+                <option value="PRP">Psychiatric Rehabilitation (PRP)</option>
+                <option value="Unsure">Not sure yet</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="preferred-date" class="form-label">
+                  Preferred Date
+                </label>
+                <input
+                  type="date"
+                  id="preferred-date"
+                  name="preferred_date"
+                  class="form-input"
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="preferred-time" class="form-label">
+                  Preferred Time of Day
+                </label>
+                <select id="preferred-time" name="preferred_time" class="form-select">
+                  <option value="" disabled selected>Select preference</option>
+                  <option value="Morning">Morning</option>
+                  <option value="Afternoon">Afternoon</option>
+                  <option value="Evening">Evening</option>
+                  <option value="Flexible">Flexible</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="additional-info" class="form-label">
+                Additional Information
+              </label>
+              <textarea
+                id="additional-info"
+                name="additional_info"
+                class="form-textarea"
+                rows="4"
+                maxlength="5000"
+                placeholder="Share anything that will help us prepare (optional)"
+              ></textarea>
+            </div>
+
+            <div class="form-group form-checkbox-group">
+              <label class="form-checkbox-label">
+                <input type="checkbox" name="consent" value="1" required>
+                <span>I agree to be contacted regarding this appointment request.</span>
+              </label>
+            </div>
+
+            <button
+              type="submit"
+              class="btn btn--primary btn--lg btn--full"
+              id="submit-btn"
+            >
+              Submit Appointment Request
+            </button>
+
+            <p class="form-note">
+              This is a request form. Submitting it does not confirm an appointment.
+              Our team will contact you to finalize the details. You will also receive a confirmation email.
+            </p>
+
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="form-popup" id="form-popup" role="dialog" aria-modal="true" aria-labelledby="popup-title" hidden>
+      <div class="form-popup-backdrop" id="popup-backdrop"></div>
+      <div class="form-popup-card">
+        <div class="form-popup-icon" id="popup-icon" aria-hidden="true"></div>
+        <h3 class="form-popup-title" id="popup-title">Request received</h3>
+        <p class="form-popup-message" id="popup-message"></p>
+        <p class="form-popup-note" id="popup-note"></p>
+        <button type="button" class="btn btn--primary" id="popup-close">
+          Close
+        </button>
+      </div>
+    </div>
+
+
+    <!-- WHAT TO EXPECT -->
+    <section class="section expect-section" aria-labelledby="expect-heading">
+      <div class="container">
+
+        <div class="section-header text-center" data-aos="fade-up" data-aos-duration="800">
+          <p class="section-eyebrow">What to Expect</p>
+          <h2 id="expect-heading" class="section-title">
+            After you submit your request
+          </h2>
+          <p class="section-lead">
+            We want the process to feel clear and manageable from the very first step.
+          </p>
+        </div>
+
+        <div class="expect-grid">
+
+          <article class="expect-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="80">
+            <div class="expect-icon">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+            </div>
+            <h3 class="expect-title">Timely follow-up</h3>
+            <p class="expect-text">
+              Our team reviews appointment requests regularly and will contact you to confirm details and answer any questions.
+            </p>
+          </article>
+
+          <article class="expect-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="160">
+            <div class="expect-icon">
+              <i class="fa-solid fa-comments" aria-hidden="true"></i>
+            </div>
+            <h3 class="expect-title">Clear next steps</h3>
+            <p class="expect-text">
+              We will explain what to bring, how to prepare, and what the first visit typically involves so there are no surprises.
+            </p>
+          </article>
+
+          <article class="expect-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="240">
+            <div class="expect-icon">
+              <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+            </div>
+            <h3 class="expect-title">Respectful care</h3>
+            <p class="expect-text">
+              From the first conversation onward, you can expect professional, confidential, and respectful support.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- PREFER TO CALL? -->
+    <section class="section call-section section--alt" aria-labelledby="call-heading">
+      <div class="container">
+
+        <div class="call-grid">
+
+          <div class="call-content" data-aos="fade-right" data-aos-duration="850">
+            <p class="section-eyebrow">Prefer to Speak with Us</p>
+            <h2 id="call-heading" class="section-title">
+              We are happy to help by phone
+            </h2>
+            <p class="call-lead">
+              If you would rather talk with someone directly, please call us. We can answer questions and help you schedule at a time that works for you.
+            </p>
+          </div>
+
+          <div class="call-cards" data-aos="fade-left" data-aos-duration="850" data-aos-delay="120">
+
+            <a href="tel:+13475136514" class="call-card">
+              <div class="call-card-icon">
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+              </div>
+              <div>
+                <span class="call-card-label">Primary</span>
+                <span class="call-card-number">347-513-6514</span>
+              </div>
+            </a>
+
+            <a href="tel:+16674393750" class="call-card">
+              <div class="call-card-icon">
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+              </div>
+              <div>
+                <span class="call-card-label">Secondary</span>
+                <span class="call-card-number">667-439-3750</span>
+              </div>
+            </a>
+
+            <a href="mailto:info@droyalmentalwellness.org" class="call-card">
+              <div class="call-card-icon">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              </div>
+              <div>
+                <span class="call-card-label">Email</span>
+                <span class="call-card-number">info@droyalmentalwellness.org</span>
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- FINAL CTA -->
+    <section class="appointment-final-cta" aria-labelledby="final-cta-heading">
+      <div class="container">
+        <div class="appointment-final-inner" data-aos="fade-up" data-aos-duration="900">
+
+          <h2 id="final-cta-heading" class="appointment-final-title">
+            You are taking a meaningful step
+          </h2>
+          <p class="appointment-final-text">
+            Reaching out for support is important. Whether you book online or call us, we are ready to help you begin with clarity and care.
+          </p>
+
+          <div class="appointment-final-actions">
+            <a href="#booking-heading" class="btn btn--primary btn--lg">
+              Return to Calendar
+            </a>
+            <a href="contact.html" class="btn btn--outline btn--lg appointment-final-secondary">
+              Contact Us
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
